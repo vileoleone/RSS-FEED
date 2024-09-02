@@ -1,5 +1,6 @@
 {
   "name": "oauth_tutorial",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,11 +8,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "express-session": "^1.15.6",
-    "node-cache": "^4.2.0",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "rss-parser": "^3.13.0"
   }
 }
