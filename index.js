@@ -33,7 +33,7 @@ app.listen(PORT, () => console.log(`=== Starting your app on http://localhost:${
 
 const feedParser = async () => {
   let parser = new Parser();
-  const feed = await parser.parseURL('https://www.emro.who.int/index.php?option=com_mediarss&feed_id=3&format=raw')
+  const feed = await parser.parseURL('https://portal.who.int/eios/API/News/Monitoring/getBoardRssFeed?queryId=3906')
   console.log(feed)
 }
 
