@@ -1,9 +1,6 @@
-import express from 'express'
-import Parser from 'rss-parser';
+const express = require("express");
+const Parser  = require ('rss-parser')
 const app = express();
-const PORT = 3000;
-
-
 
 app.get('/', async (req, res) => {
   res.setHeader('Content-Type', 'text/html');
@@ -26,15 +23,13 @@ app.get('/', async (req, res) => {
   res.end();
 });
 
-
-
-app.listen(PORT, () => console.log(`=== Starting your app on http://localhost:${PORT} ===`));
-
-
 const feedParser = async () => {
   let parser = new Parser();
   const feed = await parser.parseURL('https://portal.who.int/eios/API/News/Monitoring/getBoardRssFeed?queryId=3906')
   console.log(feed)
 }
 
-export default app
+
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
